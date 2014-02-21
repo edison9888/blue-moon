@@ -1,0 +1,50 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+//判断是否为iPhone5
+#define IS_IPHONE_5_SCREEN [[UIScreen mainScreen] bounds].size.height >= 568.0f && [[UIScreen mainScreen] bounds].size.height < 1024.0f
+
+#define IOS7 [[[UIDevice currentDevice] systemVersion]floatValue]>=7
+#define IPHONE5 [UIScreen mainScreen].bounds.size.height>=480
+
+
+//ui
+#define KSCreen_Width [UIScreen mainScreen].bounds.size.width
+#define KSCreen_Height [UIScreen mainScreen].bounds.size.height
+#define KStatusBar_Height 20
+#define KNavBar_Height 44
+#define KTabBar_Height 49
+#define Model_Height [UIScreen mainScreen].bounds.size.height-20-44-49
+
+//url
+
+#define Host_Login_URL @"http://bluemoon/user/login/m"//登陆  post
+#define Host_Register_URL @"http://bluemoon/user/signup/mobile/m"//注册 post
+#define Host_Favorite_OURL @"http://bluemoon/user/favorite/orgs/m/{userId}"//关注课程列表 get
+#define Host_Favorite_Furl @"http://bluemoon/user/favorite/friends/m/{userId}"//关注人列表 get
+
+
+
+// FONT SIZE
+#define FitSize   14
+#define MidSizeA  15
+#define MidSizeB  16
+
+// UIColor
+#define GrayColor [UIColor colorWithRed:233/255.0 green:233/255.0 blue:233/255.0 alpha:1]
+#define ThemeColor [UIColor colorWithRed:41/255.0 green:172/255.0 blue:240/255.0 alpha:1]
+
